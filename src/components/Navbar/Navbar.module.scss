@@ -1,0 +1,55 @@
+@import "src/index.scss";
+
+.AuthLink {
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+.MainLink {
+  display: table;
+  margin: auto;
+}
+
+.Link {
+  text-decoration: none;
+  color: #FFFFFF !important;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5
+}
+
+.Link:hover {
+  color: $black-border !important;
+}
+
+.ImageNavBar {
+  margin-left: 30px;
+}
+
+.NavBar {
+  padding: 0.5rem 1rem;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $base-blue;
+  margin-bottom: 0 !important;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  justify-content: space-between;
+}
+
+.NavBarCollapseButton {
+  background-color: $base-blue;
+}
+
+.HeaderButton {
+  padding-bottom: 35px;
+  text-align: center;
+  max-width: 200px;
+}
+
+.HeaderButton:hover {
+  background-color: $base-blue !important;
+}

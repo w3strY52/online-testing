@@ -1,0 +1,39 @@
+@import "src/index.scss";
+
+
+.LoginContainer {
+  padding-top: 20%;
+}
+
+.AccountLink {
+  text-decoration: none;
+}
+
+.AccountLink:hover {
+  color: $black-border !important;
+}
+
+
+.HeaderDropDown:hover {
+  background-color: $base-blue;
+  text-decoration-line: none;
+  color: $base-pink !important;
+}
+
+.HeaderDropDown {
+  background-color: $base-blue;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+}
+
+.HeaderDropDown:hover {
+  background-color: $base-blue !important;
+}
+
+.Link {
+  text-decoration: none;
+  color: #FFFFFF !important;
+  font-size: 20px;
+  text-align: center;
+}

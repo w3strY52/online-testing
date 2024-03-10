@@ -1,0 +1,16 @@
+@import "src/index.scss";
+
+.MyButton {
+  width: 100%;
+
+  background-color: $base-pink!important;
+  color: #FFFFFF!important;
+  border-radius: 10px!important;
+  border: $base-pink!important;
+}
+
+.MyButton:hover {
+  background-color: $base-pink!important;
+  color: #111111!important;
+  text-decoration-line: none !important;
+}

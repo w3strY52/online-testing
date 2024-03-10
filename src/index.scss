@@ -1,0 +1,89 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+$base-pink: rgba(134, 226, 213, 1);
+$base-blue: rgba(190, 220, 227, 1);
+$black-border: rgba(24, 51, 69, 0.3);
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Montserrat, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-size: 20px;
+  font-weight: normal !important;
+}
+
+a:hover {
+  color: $base-pink;
+  text-decoration-line: none !important;
+}
+
+Link {
+  color: $base-blue;
+}
+
+Link:hover {
+  color: $base-pink !important;
+}
+
+.centered {
+  text-align: center;
+}
+
+.centeredContent {
+  padding-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+}
+
+
+.Button {
+  width: 25%;
+  background-color: $base-pink !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  border: $base-pink !important;
+  font-style: normal !important;
+  font-weight: bold !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  text-align: center !important;
+  text-transform: capitalize !important;
+  margin-top: 30px !important;
+  text-decoration-line: underline !important;
+}
+
+.Button:hover {
+  background-color: $base-pink !important;
+  color: $base-blue !important;
+  text-decoration-line: none !important;
+}
+
+hr {
+  border: 2px solid #ffffff !important;}
+
+
+p{
+  font-family: "Times New Roman" !important;
+}
