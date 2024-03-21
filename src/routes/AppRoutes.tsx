@@ -6,6 +6,7 @@ import TestingPage from "../pages/TestingPage";
 
 import TestResultPage from "../pages/TestResultPage";
 import ProtectedRoute from "./ProtectedRoute";
+import ToBeContinuedPage from "../pages/ToBeContinuedPage";
 
 function AppRoutes() {
     return (
@@ -13,8 +14,9 @@ function AppRoutes() {
             <Routes>
                 <Route path={'/'} element={<ProtectedRoute><MainPage/></ProtectedRoute>}/>
                 <Route path={'/test/:id'} element={<ProtectedRoute><TestingPage/></ProtectedRoute>}/>
-                <Route path={'/results'} element={<ProtectedRoute><TestResultPage></TestResultPage></ProtectedRoute>}/>
+                <Route path={'/results/:id'} element={<ProtectedRoute><TestResultPage/></ProtectedRoute>}/>
                 <Route path="/login" element={<LoginPage />}/>
+                <Route path="/exam" element={<ToBeContinuedPage />}/>
             </Routes>
         </div>
 

@@ -8,6 +8,6 @@ export type TUserAuth = {
 };
 
 export type TAuth = {
-    login: '',
-    password: ''
+    login: string,
+    password: string
 };
