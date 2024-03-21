@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate} from "react-router-dom";
 import {AuthService} from "../../APIService/AuthService";
 
-import {useAuthContext} from "../../context/authContext";
 import {TAuth} from "../../types/UserAuthType";
 
 import styles from './Login.module.scss';
@@ -13,11 +12,11 @@ import AuthInput from "../LoginInput/AuthInput";
 
 function Login() {
     const navigate = useNavigate();
-    const {setIsAuth} = useAuthContext();
     const [state, setState] = useState<TAuth>({
         login: "",
         password: ""
     });
+
 
     const handleChange = (event: any) => {
         const {name, value} = event.target;
@@ -26,10 +25,15 @@ function Login() {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+        if (state.login !== 'user' || state.password !== '123') {
+            console.log('Неправильный логин или пароль');
+            return;
+        }
         try {
             await AuthService.loginUser(state)
-            setIsAuth(!!localStorage.getItem('auth'));
-            navigate(`/`)
+            //  navigate('/', {replace: true});
+            // eslint-disable-next-line no-restricted-globals
+            location.replace('/')
         } catch (e: any) {
             console.log(e.response.data.message || e.response.data.error)
         }
@@ -90,7 +94,7 @@ function Login() {
                     <Row className={classNames('justify-content-center')}>
                         <Col xs={12} sm={5}>
                             <MyButton onClick={handleSubmit} type={"submit"}>
-                                "Войти"
+                                Войти
                             </MyButton>
                         </Col>
                     </Row>

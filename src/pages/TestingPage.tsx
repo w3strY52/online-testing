@@ -8,18 +8,18 @@ import TestingTasksPage from "./TestingTasksPage";
 
 function TestingPage() {
 
-    const id = useParams();
+    const id = useParams().id;
     const [agreed, setAgreed] = useState<boolean>(false)
     if (!id) {
         return (<p>Ne ukazan id</p>)
     }
-    const test = testMock
+    const test = testMock.find(x => x.id.toString() === id)!
 
     return (
         <div>
             {agreed ?
                 <div>
-                    <TestingTasksPage/>
+                    <TestingTasksPage testId={id}/>
                 </div> :
                 <Container style={{marginTop: 50}}>
                     <Card>
